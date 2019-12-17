@@ -1,0 +1,16 @@
+<p-toolbar styleClass="navbar">
+  <div class="ui-toolbar-group-left">
+    <h1 class="navbar-title">
+      <span routerLink="/" class="clickable">Scully Blog</span>
+    </h1>
+  </div>
+  <div class="ui-toolbar-group-right">
+    <p-button styleClass="ui-button-secondary ui-button-rounded" label="Blog" routerLink="/blogs"></p-button>
+    <p-button styleClass="ui-button-secondary ui-button-rounded" label="About" routerLink="/about"></p-button>
+  </div>
+</p-toolbar>
+<ng-content></ng-content>
+
+<ul>
+  <li *ngFor="let route of scullyRoute.available$ | async" [routerLink]="[route.route]">{{route.route}}</li>
+</ul>

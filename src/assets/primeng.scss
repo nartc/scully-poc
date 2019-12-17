@@ -1,0 +1,7 @@
+p-toolbar {
+  & .navbar {
+    &.ui-toolbar.ui-widget {
+      border-radius: 0;
+    }
+  }
+}
